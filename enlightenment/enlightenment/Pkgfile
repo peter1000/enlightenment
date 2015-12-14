@@ -6,20 +6,14 @@
 run=(elementary emotion-generic-players evas-generic-loaders efl python-efl)
 
 name=enlightenment
-version=0.19.13
-release=2
-source=(http://download.enlightenment.org/rel/apps/enlightenment/$name-$version.tar.gz enlightenment.patch)
+version=0.20.0
+release=1
+source=(http://download.enlightenment.org/rel/apps/enlightenment/$name-$version.tar.gz)
 
-build()
-{
+build(){
     cd $name-$version
-    
-    patch -p1 -i $SRC/enlightenment.patch
-    
-    ./configure --prefix=/usr \
-                --disable-mount-udisks
-                
+    export CFLAGS="$CFLAGS -fvisibility=hidden"
+    ./configure --prefix=/usr 
     make
     make DESTDIR=$PKG install
-    
 }
