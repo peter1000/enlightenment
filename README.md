@@ -26,16 +26,17 @@ First we get this git and the core git localy (step1) as normal user. As we want
 
     $ su -
     # echo "LFS=/mnt/lfs
-    VERSION=core" > /etc/install-nutyx.conf
+    VERSION=current
+    DEPOT=/DEPOT" > /etc/install-nutyx.conf
     # mkdir -p /etc/install-nutyx.conf.d
     # cat > /etc/install-nutyx.conf.d/cards.conf << "EOF"
-    dir /core/enlightenment
-	dir /core/gui
-	dir /core/cli
-	dir /core/base|http://downloads.nutyx.org
-	dir /core/base-extra|http://downloads.nutyx.org
-	base /core/base
-	base /core/base-extra
+    dir /DEPOT/enlightenment
+	dir /DEPOT/gui
+	dir /DEPOT/cli
+	dir /DEPOT/base|http://downloads.nutyx.org
+	dir /DEPOT/base-extra|http://downloads.nutyx.org
+	base /DEPOT/base
+	base /DEPOT/base-extra
 	logdir /var/log/pkgbuild
 	EOF
  We need to have a correct pkgmk.conf file as well so, lets create it:
