@@ -123,4 +123,4 @@ First we get this git and the core git localy (step1) as normal user. As we want
     # cd /root/enlightenment
     # bash scripts/enlightenment-extra -a 
 
-Have fun :)
+Have fun :) ^_^
