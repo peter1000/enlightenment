@@ -7,13 +7,11 @@ name=rage
 version=0.1.4
 release=1
 source=(http://download.enlightenment.org/rel/apps/$name/$name-$version.tar.gz)
-
-build()
-{
+#
+build() {
     cd $name-$version 
     ./configure --prefix=/usr \
                 --mandir=/usr/man 
-                
     make
     make DESTDIR=$PKG install
 }

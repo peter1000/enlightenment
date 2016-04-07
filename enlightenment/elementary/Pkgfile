@@ -4,15 +4,13 @@
 # Depends on: efl
 
 name=elementary
-version=1.16.0
+version=1.17.0
 release=1
 source=(http://download.enlightenment.org/rel/libs/elementary/$name-$version.tar.gz)
-
-build()
-{
+#
+build() {
     cd $name-$version 
     ./configure --prefix=/usr 
-                
     make
     make DESTDIR=$PKG install
 }

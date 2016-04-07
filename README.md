@@ -26,11 +26,12 @@ First we get this git and the core git localy (step1) as normal user. As we want
 
     $ su -
     # echo "LFS=/mnt/lfs
-    VERSION=current
+    VERSION=8.1
     DEPOT=/DEPOT" > /etc/install-nutyx.conf
     # mkdir -p /etc/install-nutyx.conf.d
     # cat > /etc/install-nutyx.conf.d/cards.conf << "EOF"
-    dir /DEPOT/enlightenment
+        dir /DEPOT/enlightenment-extra
+        dir /DEPOT/enlightenment
 	dir /DEPOT/gui
 	dir /DEPOT/cli
 	dir /DEPOT/base|http://downloads.nutyx.org
@@ -121,6 +122,7 @@ First we get this git and the core git localy (step1) as normal user. As we want
 #### 12. If you want to re build the 'enlightenment-extra' collection from the sources
 
     # cd /root/enlightenment
+    # bash scripts/enlightenment-extra -c 
     # bash scripts/enlightenment-extra -a 
 
-Have fun :) ^_^
+Have fun :)
