@@ -4,13 +4,13 @@
 # Depends on: elementary emotion-generic-players evas-generic-loaders xcb-util-keysyms efl python-efl
 
 run=(elementary emotion-generic-players evas-generic-loaders efl python-efl)
-
+#
 name=enlightenment
-version=0.20.3
+version=0.20.6
 release=1
 source=(http://download.enlightenment.org/rel/apps/enlightenment/$name-$version.tar.gz)
-
-build(){
+#
+build() {
     cd $name-$version
     export CFLAGS="$CFLAGS -fvisibility=hidden"
     ./configure --prefix=/usr 

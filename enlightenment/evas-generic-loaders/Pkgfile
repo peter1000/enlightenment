@@ -4,15 +4,13 @@
 # Depends on: elementary 
 
 name=evas-generic-loaders
-version=1.16.0
+version=1.17.0
 release=1
 source=(http://download.enlightenment.org/rel/libs/evas_generic_loaders/evas_generic_loaders-$version.tar.gz)
-
-build()
-{
+#
+build() {
     cd evas_generic_loaders-$version 
     ./configure --prefix=/usr
-    
     make
     make DESTDIR=$PKG install
 }

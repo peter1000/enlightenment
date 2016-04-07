@@ -4,15 +4,13 @@
 # Depends on: python python3 cython pkg-config elementary dbus-python
 
 name=python-efl
-version=1.16.0
+version=1.17.0
 release=1
 source=(http://download.enlightenment.org/rel/bindings/python/$name-$version.tar.gz)
-
-build()
-{
+#
+build() {
     cd $name-$version 
     /usr/bin/python setup.py build
     /usr/bin/python setup.py install --prefix=/usr --root=$PKG
     /usr/bin/python3 setup.py install --prefix=/usr --root=$PKG
-
 }
