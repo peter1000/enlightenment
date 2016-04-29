@@ -1,0 +1,17 @@
+# Description: EFL simple text editor
+# URL: http://www.enlightenment.org/
+# Packager: sh4d0w - www.nutyx.org
+# Depends on: elementary
+
+name=ecrire
+version=0.1.0
+release=1
+source=()
+#
+build() {
+    git clone https://git.enlightenment.org/apps/ecrire.git
+    cd $name
+    cmake -DCMAKE_INSTALL_PREFIX=/usr ../$name
+    make
+    make DESTDIR=$PKG install
+}
