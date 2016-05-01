@@ -1,7 +1,7 @@
 # Description: EFL-based calculator
 # URL: http://www.enlightenment.org/
 # Packager: sh4d0w - www.nutyx.org
-# Depends on: elementary
+# Depends on: git elementary
 
 name=equate
 version=0.1.0
