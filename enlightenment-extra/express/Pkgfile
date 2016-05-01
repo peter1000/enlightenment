@@ -1,0 +1,17 @@
+# Description: EFL-based IRC Client which operates similar to the Terminology interface
+# URL: http://www.enlightenment.org/
+# Packager: sh4d0w - www.nutyx.org
+# Depends on: elementary
+
+name=express
+version=0.1.0
+release=1
+source=()
+#
+build() {
+    git clone https://git.enlightenment.org/apps/express.git
+    cd $name
+    ./autogen.sh --prefix=/usr
+    make
+    make DESTDIR=$PKG install
+}
